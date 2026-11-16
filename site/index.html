@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>João Deiró · Senior Product Designer</title>
+<meta name="description" content="Senior Product Designer in Rio de Janeiro. I take products from idea to launch, thinking like the business owner. Open to remote roles.">
+<meta property="og:title" content="João Deiró · Senior Product Designer">
+<meta property="og:description" content="I take products from idea to launch, thinking like the business owner.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23121614'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='15' font-weight='700' fill='%23fff' text-anchor='middle'%3EJD%3C/text%3E%3C/svg%3E">
+<style>html{color-scheme:light dark}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,650&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one editorial column (max 1080px). Home = thesis, proof receipts, three case rows, about, contact. Case = spec sheet header, "in short", story, results. Every text block exists in EN and PT; html[data-lang] picks one. */
+:root{
+  --bg:#F4F5F2; --surface:#FFFFFF; --fg:#121614; --muted:#58605B; --line:#D8DCD6;
+  --accent:#2347D6; --accent-soft:#E7ECFF; --ph:#E9ECE7; --ph-ink:#7A837D; --shot:#E3E6E1;
+  --display:"Bricolage Grotesque", "Hanken Grotesk", system-ui, sans-serif;
+  --body:"Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --wrap:1080px; --read:680px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0E1110; --surface:#161A18; --fg:#EDF0EC; --muted:#A1A9A4; --line:#2A302C;
+  --accent:#93A6FF; --accent-soft:#1B2246; --ph:#1A1F1C; --ph-ink:#7F8983; --shot:#1C211E; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1110; --surface:#161A18; --fg:#EDF0EC; --muted:#A1A9A4; --line:#2A302C;
+  --accent:#93A6FF; --accent-soft:#1B2246; --ph:#1A1F1C; --ph-ink:#7F8983; --shot:#1C211E; color-scheme:dark}
+
+/* language */
+html[data-lang="pt"] .l-en, html:not([data-lang="pt"]) .l-pt{display:none !important}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top, 0px);z-index:10;background:var(--bg)}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top, 0px);z-index:5;background:color-mix(in srgb, var(--bg) 88%, transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.brand{font-family:var(--display);font-weight:650;font-size:19px;text-decoration:none;letter-spacing:-0.01em;white-space:nowrap}
+.nav{display:flex;align-items:center;gap:20px;font-size:15px}
+.nav a{text-decoration:none;color:var(--muted)}
+.nav a:hover{color:var(--fg)}
+.lang{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:2px}
+.lang button{font:500 12px/1 var(--mono);letter-spacing:.04em;border:0;background:transparent;color:var(--muted);padding:7px 9px;border-radius:999px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
+.btn{display:inline-flex;align-items:center;gap:8px;font:500 15px/1 var(--body);padding:11px 16px;border-radius:999px;border:1px solid var(--fg);background:var(--fg);color:var(--bg);text-decoration:none;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--fg);border-color:var(--line)}
+.nav .btn{color:var(--bg)}
+@media (max-width:680px){.nav .hide-s{display:none}.nav{gap:12px}}
+@media (max-width:380px){.nav .cv{display:none}}
+
+/* type */
+.eyebrow{font-family:var(--mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+h1,h2,h3{font-family:var(--display);font-weight:650;letter-spacing:-0.02em;text-wrap:balance;margin:0}
+h1{font-size:clamp(34px,6vw,64px);line-height:1.04}
+h2{font-size:clamp(26px,3.4vw,36px);line-height:1.12}
+h3{font-size:21px;line-height:1.25}
+p{margin:0}
+
+/* hero */
+.hero{padding-block:72px 40px;display:grid;gap:24px}
+.hero p.lede{font-size:clamp(18px,2vw,21px);color:var(--muted);max-width:620px}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+
+/* receipts */
+.receipts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-block:24px 8px}
+.receipt{padding:22px 20px 22px 0;display:grid;gap:6px;align-content:start;min-width:0}
+.receipt + .receipt{padding-left:20px;border-left:1px solid var(--line)}
+.receipt .fig{font-family:var(--mono);font-weight:500;font-size:clamp(22px,2.6vw,30px);letter-spacing:-0.02em;font-variant-numeric:tabular-nums}
+.receipt .fig b{color:var(--accent);font-weight:500}
+.receipt .what{font-size:15px;color:var(--muted)}
+@media (max-width:760px){.receipts{grid-template-columns:1fr}.receipt + .receipt{padding-left:0;border-left:0;border-top:1px solid var(--line)}}
+
+/* sections */
+.section{padding-block:64px}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:28px;flex-wrap:wrap}
+
+/* case rows */
+.cases{display:grid;gap:56px}
+.cases > *{min-width:0}
+.case-row{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:36px;align-items:center;text-decoration:none}
+.case-row > *{min-width:0}
+.case-row .txt{display:grid;gap:12px}
+.case-row h3{font-size:clamp(22px,2.4vw,28px)}
+.case-row .outcome{font-family:var(--mono);font-size:14px;color:var(--fg);background:var(--accent-soft);padding:6px 10px;border-radius:6px;justify-self:start}
+.case-row .more{color:var(--accent);font-weight:600}
+.case-row:hover h3{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
+@media (max-width:820px){.case-row{grid-template-columns:1fr;gap:18px}}
+
+/* images and placeholders */
+.ph,.shot{margin:0;display:grid;gap:8px;min-width:0}
+.ph-box{aspect-ratio:16/10;max-width:100%;width:100%;border:1.5px dashed var(--ph-ink);border-radius:12px;background:var(--ph);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;gap:6px;color:var(--ph-ink);min-width:0}
+.ph-box span{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.ph-box strong{font-weight:500;color:var(--muted);font-size:15px;max-width:34ch}
+.shot .frame{background:var(--shot);border-radius:12px;padding:clamp(10px,2.4vw,24px);aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.shot img{display:block;max-width:100%;max-height:100%;height:auto;border-radius:8px;box-shadow:0 1px 2px rgba(0,0,0,.08),0 8px 24px rgba(0,0,0,.08)}
+.story .shot .frame{aspect-ratio:auto}
+.ph figcaption,.shot figcaption{font-size:14px;color:var(--muted)}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:48px}
+.about-grid > *{min-width:0}
+.about-grid .prose{display:grid;gap:16px;max-width:var(--read)}
+.jobs{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.jobs li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.jobs .co{font-weight:600}
+.jobs .when{font-family:var(--mono);font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.jobs .role{grid-column:1/-1;font-size:15px;color:var(--muted)}
+@media (max-width:820px){.about-grid{grid-template-columns:1fr}}
+
+/* contact */
+.contact{border-top:1px solid var(--line)}
+.contact .wrap{padding-block:64px 80px;display:grid;gap:20px}
+.contact-lines{display:flex;flex-wrap:wrap;gap:12px}
+.copy{font-family:var(--mono);font-size:15px}
+.note{font-size:15px;color:var(--muted)}
+footer{font-size:13px;color:var(--muted);padding-block:0 40px}
+
+/* case page */
+.case{padding-block:40px 24px}
+.back{font-size:15px;color:var(--muted);text-decoration:none}
+.back:hover{color:var(--fg)}
+.case-head{display:grid;gap:20px;padding-block:24px 8px}
+.spec{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:8px 0 0}
+.spec div{padding:14px 16px 14px 0;display:grid;gap:2px;min-width:0;align-content:start}
+.case-head h1{font-size:clamp(30px,4.4vw,48px);line-height:1.08}
+.spec dt{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.spec dd{margin:0;font-size:15px}
+.inshort{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px 24px;display:grid;gap:10px;max-width:var(--read)}
+.inshort .eyebrow{color:var(--accent)}
+.inshort p{font-size:18px}
+.jump{font-size:15px;color:var(--accent);font-weight:600;text-decoration:none}
+.story{display:grid;gap:22px;max-width:var(--read);padding-block:32px}
+.story > *{min-width:0}
+.story h2{font-size:clamp(22px,2.6vw,28px);margin-top:20px}
+.story ul{margin:0;padding-left:20px;display:grid;gap:8px}
+.story .challenge{border-left:3px solid var(--accent);padding-left:16px}
+.story .decision h3{font-size:19px;margin-bottom:6px}
+.results{display:grid;gap:12px;list-style:none;padding:0 !important;margin:0}
+.results li{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.next{border-top:1px solid var(--line);padding-block:28px 64px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.next a{text-decoration:none;display:grid;gap:4px}
+.next a strong{font-family:var(--display);font-size:20px}
+
+[data-view]{display:none}
+[data-view].on{display:block}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#">João Deiró</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#work" class="hide-s"><span class="l-en">Work</span><span class="l-pt">Cases</span></a>
+      <a href="#about" class="hide-s"><span class="l-en">About</span><span class="l-pt">Sobre</span></a>
+      <a class="cv l-en" href="joao-deiro-cv.pdf" target="_blank" rel="noopener">CV</a>
+      <a class="cv l-pt" href="joao-deiro-cv-pt.pdf" target="_blank" rel="noopener">CV</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" id="lang-en" data-set-lang="en" aria-pressed="true">EN</button>
+        <button type="button" id="lang-pt" data-set-lang="pt" aria-pressed="false">PT</button>
+      </div>
+      <a class="btn" href="#contact"><span class="l-en">Contact</span><span class="l-pt">Contato</span></a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ============ HOME ============ -->
+<section data-view="home" class="on">
+  <div class="wrap">
+    <div class="hero">
+      <p class="eyebrow"><span class="l-en">Senior Product Designer · Rio de Janeiro · Remote</span><span class="l-pt">Product Designer Sênior · Rio de Janeiro · Remoto</span></p>
+      <h1><span class="l-en">I take products from idea to launch, thinking like the business owner.</span><span class="l-pt">Levo produtos da ideia ao lançamento, pensando como dono do negócio.</span></h1>
+      <p class="lede"><span class="l-en">Five years across a product studio, retail and B2B SaaS. As a sole designer, I run discovery, design the product and stay until it ships. Now I also prototype in code with AI.</span><span class="l-pt">Cinco anos de experiência em estúdio de produto, varejo e SaaS B2B. Como único designer, conduzo o discovery, desenho o produto e fico até ele ir pro ar. Hoje também prototipo em código com IA.</span></p>
+      <div class="actions">
+        <a class="btn" href="#work"><span class="l-en">See the work</span><span class="l-pt">Ver os cases</span></a>
+        <a class="btn ghost l-en" href="joao-deiro-cv.pdf" target="_blank" rel="noopener">Open CV</a>
+        <a class="btn ghost l-pt" href="joao-deiro-cv-pt.pdf" target="_blank" rel="noopener">Abrir CV</a>
+      </div>
+    </div>
+
+    <div class="receipts">
+      <div class="receipt"><p class="fig"><span class="l-en">1.6 <b>→</b> 2.8</span><span class="l-pt">1,6 <b>→</b> 2,8</span></p><p class="what"><span class="l-en">orders per customer a month, after a recurring order program I designed for Brazil's largest fresh-produce chain</span><span class="l-pt">pedidos por cliente por mês, depois de um programa de pedido recorrente que desenhei para a maior rede de hortifrúti do Brasil</span></p></div>
+      <div class="receipt"><p class="fig"><span class="l-en">5 days</span><span class="l-pt">5 dias</span></p><p class="what"><span class="l-en">from idea to a coded prototype of a whole investment platform, which became the engineers' starting point</span><span class="l-pt">da ideia a um protótipo em código de uma plataforma de investimentos inteira, que virou o ponto de partida dos engenheiros</span></p></div>
+      <div class="receipt"><p class="fig">Discovery <b>→</b> MVP</p><p class="what"><span class="l-en">a paid discovery I ran on my own turned into a build contract and a live AI product</span><span class="l-pt">um discovery pago que conduzi sozinho virou contrato de construção e um produto com IA no ar</span></p></div>
+    </div>
+  </div>
+
+  <div class="wrap section" id="work">
+    <div class="section-head"><h2><span class="l-en">Selected work</span><span class="l-pt">Cases selecionados</span></h2><p class="eyebrow"><span class="l-en">3 case studies</span><span class="l-pt">3 cases</span></p></div>
+    <div class="cases">
+      <a class="case-row" href="#work-investment-platform">
+        <figure class="shot"><div class="frame"><img src="img/investment-platform-lp-performance.webp" alt="Investment platform, portfolio performance view with net worth, returns and a monthly chart" width="1600" height="1000" loading="lazy"></div></figure>
+        <div class="txt">
+          <p class="eyebrow"><span class="l-en">Fintech · Web · 2025 to 2026</span><span class="l-pt">Fintech · Web · 2025 a 2026</span></p>
+          <h3><span class="l-en">How I took an investment platform from idea to launch, starting with a coded prototype I built in 5 days</span><span class="l-pt">Como eu levei uma plataforma de investimentos da ideia ao lançamento, começando com um protótipo em código que construí em 5 dias</span></h3>
+          <p class="outcome"><span class="l-en">Idea → coded prototype in 5 days → live product</span><span class="l-pt">Ideia → protótipo em código em 5 dias → produto no ar</span></p>
+          <span class="more"><span class="l-en">Read the case →</span><span class="l-pt">Ler o case →</span></span>
+        </div>
+      </a>
+      <a class="case-row" href="#work-ai-marketing">
+        <figure class="shot"><div class="frame"><img src="img/ai-marketing-job-map.webp" alt="Job map from the discovery of the AI marketing tool" width="1800" height="1369" loading="lazy"></div></figure>
+        <div class="txt">
+          <p class="eyebrow"><span class="l-en">AI · Small business · Web · 2025 to 2026</span><span class="l-pt">IA · Pequenos negócios · Web · 2025 a 2026</span></p>
+          <h3><span class="l-en">How I helped a founder find out if his idea was worth building, then designed the AI product through to a finished MVP</span><span class="l-pt">Como eu ajudei um fundador a descobrir se a ideia dele valia a pena, e depois desenhei o produto com IA até um MVP concluído</span></h3>
+          <p class="outcome"><span class="l-en">Paid discovery → build contract → live MVP</span><span class="l-pt">Discovery pago → contrato de construção → MVP no ar</span></p>
+          <span class="more"><span class="l-en">Read the case →</span><span class="l-pt">Ler o case →</span></span>
+        </div>
+      </a>
+      <a class="case-row" href="#work-recurring-orders">
+        <figure class="ph"><div class="ph-box"><span>Image to add</span><strong>Hortifruti: order type choice and recurring order setup</strong></div></figure>
+        <div class="txt">
+          <p class="eyebrow"><span class="l-en">Retail · Web + WhatsApp · 2022</span><span class="l-pt">Varejo · Web + WhatsApp · 2022</span></p>
+          <h3><span class="l-en">How I designed a recurring order program that lifted order frequency from 1.6 to 2.8 a month</span><span class="l-pt">Como eu desenhei um programa de pedido recorrente que levou a frequência de 1,6 para 2,8 pedidos por mês</span></h3>
+          <p class="outcome"><span class="l-en">13% of WhatsApp sales · highest-NPS initiative</span><span class="l-pt">13% das vendas pelo WhatsApp · maior NPS da companhia</span></p>
+          <span class="more"><span class="l-en">Read the case →</span><span class="l-pt">Ler o case →</span></span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="wrap section" id="about">
+    <div class="about-grid">
+      <div class="prose l-en">
+        <h2>About</h2>
+        <p>I'm a product designer who covers product, design and delivery. At Taller, a Brazilian product studio, I'm the sole designer on client products, often working as designer, product manager and delivery manager at once.</p>
+        <p>Before designing, I go where the work happens: store floors, client spreadsheets, discovery sessions. I design thinking about the number the business needs to move.</p>
+        <p>Based in Rio de Janeiro (UTC-3), with full overlap with US East and 4 to 5 hours with Central Europe. Fluent in English. Open to remote roles, full-time or contract.</p>
+      </div>
+      <div class="prose l-pt">
+        <h2>Sobre</h2>
+        <p>Sou um product designer que cobre produto, design e entrega. Na Taller, um estúdio de produto brasileiro, sou o único designer nos produtos de clientes, muitas vezes atuando ao mesmo tempo como designer, product manager e gerente de entrega.</p>
+        <p>Antes de desenhar, vou onde o trabalho acontece: a loja, as planilhas do cliente, as sessões de discovery. Desenho pensando no número que o negócio precisa mover.</p>
+        <p>Moro no Rio de Janeiro (UTC-3), com sobreposição total com a costa leste dos EUA e de 4 a 5 horas com a Europa Central. Inglês fluente. Aberto a vagas remotas, CLT ou contrato.</p>
+      </div>
+      <ul class="jobs">
+        <li><span class="co">Taller</span><span class="when"><span class="l-en">2024 to now</span><span class="l-pt">2024 até hoje</span></span><span class="role"><span class="l-en">Product Designer · product studio, clients in Brazil, the US, Europe and Africa</span><span class="l-pt">Product Designer · estúdio de produto, clientes no Brasil, EUA, Europa e África</span></span></li>
+        <li><span class="co">Prevision</span><span class="when">2023</span><span class="role"><span class="l-en">Product Designer · B2B SaaS for construction planning</span><span class="l-pt">Product Designer · SaaS B2B de planejamento de obras</span></span></li>
+        <li><span class="co">Hortifruti</span><span class="when">2022</span><span class="role"><span class="l-en">Product Designer · Brazil's largest fresh-produce retail chain</span><span class="l-pt">Product Designer · a maior rede de hortifrúti do Brasil</span></span></li>
+        <li><span class="co">ZAST</span><span class="when">2021</span><span class="role">UX/UI Designer · design systems</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CASE: INVESTMENT PLATFORM ============ -->
+<section data-view="work-investment-platform">
+  <div class="wrap case">
+    <a class="back" href="#work"><span class="l-en">← All work</span><span class="l-pt">← Todos os cases</span></a>
+
+    <div class="l-en">
+      <div class="case-head">
+        <p class="eyebrow">Case study · Fintech</p>
+        <h1>How I took an investment platform from idea to launch, starting with a coded prototype I built in 5 days</h1>
+        <dl class="spec">
+          <div><dt>Role</dt><dd>Product Designer (sole designer)</dd></div>
+          <div><dt>Client</dt><dd>Investment-tracking platform in Angola, through a product studio</dd></div>
+          <div><dt>Platform</dt><dd>Web</dd></div>
+          <div><dt>Period</dt><dd>Jul 2025 to Apr 2026</dd></div>
+          <div><dt>Team</dt><dd>Client founders, studio founders, engineers, a development manager from month 6</dd></div>
+        </dl>
+      </div>
+      <figure class="shot"><div class="frame"><img src="img/investment-platform-lp-performance.webp" alt="Portfolio performance view: net worth, returns and a monthly chart" width="1600" height="1000"></div><figcaption>Portfolio performance, from the launch landing page I designed for the product.</figcaption></figure>
+      <div class="inshort"><p class="eyebrow">In short</p><p>The client came with only an idea. I ran discovery on my own, vibe-coded a prototype of the whole product in 5 days that became the engineers' starting point, and then designed the real product page by page until it went live.</p><a class="jump" href="#r-invest">Jump to results ↓</a></div>
+      <div class="story">
+        <h2>Context</h2>
+        <p>The client wanted to become the go-to place for Angolan investors to see their real performance across brokers. Their users were beginner investors, experienced investors and investment advisors who manage money for their own clients. Until then, the client ran its advisory business on Excel spreadsheets.</p>
+        <p class="challenge"><strong>The challenge:</strong> turn an ambitious vision, with a long wishlist, into a lean first version, in a domain full of financial terms and logic I had to learn fast.</p>
+        <h2>Discovery</h2>
+        <p>In the first weeks I had calls with the client almost every day, and their spreadsheets became my main source to understand the business, the users and the financial logic behind every number. We worked through a Lean Canvas, event storming and user story mapping.</p>
+        <p>To keep priorities honest, I built a canvas on top of the Fit for Purpose framework (David J. Anderson and Alexei Zheglov). It connects why a customer would use the product, how they judge whether it's working, and the metric that shows it. For example: an investor wants to consolidate positions from several brokers, judges it by how fast they can log a trade, and the metric is logging a trade in under 60 seconds.</p>
+        <figure class="ph"><div class="ph-box"><span>Image to add</span><strong>Fit for Purpose canvas</strong></div></figure>
+        <h2>Key decisions</h2>
+        <div class="decision"><h3>1. Build it, not just design it</h3><p>The client needed to see the product in days, not weeks. AI coding tools had just made it possible for a designer to build and deploy a coded prototype alone, and this was the first client project where I could do it. With Cursor, I vibe-coded a prototype of the whole product: 15 pages in 5 days, with its own GitHub repository and a live deployment the client could click through. It wasn't meant to be the final product. It showed the full vision at once, so the client could react to something real and the engineers had a clear starting point to build the actual platform, with its architecture, data and features.</p></div>
+        <figure class="shot"><div class="frame"><img src="img/investment-platform-prototype-pages.webp" alt="Six pages of the 5-day prototype: portfolio, transactions, insights, indicators, custody accounts and login" width="1600" height="764" loading="lazy"></div><figcaption>Six of the 15 pages in the 5-day prototype, as deployed.</figcaption></figure>
+        <div class="decision"><h3>2. Cut to the core</h3><p>The client dreamed of much more: trading simulation, a learning area, news, community, gamification and, one day, becoming a brokerage. With the canvas as the reference, every feature had to serve a customer purpose and a metric. The MVP focused on what investors needed first: recording their positions and tracking the volume of their portfolio. The rest went to the roadmap.</p></div>
+        <div class="decision"><h3>3. One account model for investors and advisors</h3><p>The product had to work both for people investing their own money and for advisors managing others'. I designed the experience so an account could stand alone or hold linked clients, and worked with the development manager on the data model behind it.</p></div>
+        <figure class="shot"><div class="frame"><img src="img/investment-platform-lp-audiences.webp" alt="Two account types side by side: an investor with one portfolio and an advisor with a portfolio per client" width="1600" height="1542" loading="lazy"></div><figcaption>The same idea on the launch landing page: one product for investors and for advisors with linked clients.</figcaption></figure>
+        <h2 id="r-invest">Results</h2>
+        <ul class="results">
+          <li><strong>The product is live.</strong> After the prototype, I designed the real product page by page, with much more depth and polish, while we adopted front-end component libraries with the engineers. The skeleton from those 5 days is still there; the visual quality is on another level.</li>
+          <li>The canvas became the client's reference for prioritization, connecting the value they wanted to deliver with measurable outcomes.</li>
+        </ul>
+        <figure class="shot"><div class="frame"><img src="img/investment-platform-prototype.webp" alt="The 5-day prototype: portfolio performance page with demo data" width="1600" height="1145" loading="lazy"></div><figcaption>The 5-day prototype: the same portfolio performance page, running on demo data.</figcaption></figure>
+        <figure class="shot"><div class="frame"><img src="img/investment-platform-performance.webp" alt="Live product: portfolio performance page" width="1600" height="1145" loading="lazy"></div><figcaption>The live product: portfolio performance page. Client logo blurred.</figcaption></figure>
+        <h2>What I'd do differently</h2>
+        <p>I'd test the prototype directly with investors and advisors before development, not only with the client team. And I'd turn the fitness metrics into launch metrics from day one, so we could measure the product with the same language we used to design it.</p>
+      </div>
+    </div>
+
+    <div class="l-pt">
+      <div class="case-head">
+        <p class="eyebrow">Case · Fintech</p>
+        <h1>Como eu levei uma plataforma de investimentos da ideia ao lançamento, começando com um protótipo em código que construí em 5 dias</h1>
+        <dl class="spec">
+          <div><dt>Cargo</dt><dd>Product Designer (único designer)</dd></div>
+          <div><dt>Cliente</dt><dd>Plataforma de acompanhamento de investimentos em Angola, via estúdio de produto</dd></div>
+          <div><dt>Plataforma</dt><dd>Web</dd></div>
+          <div><dt>Período</dt><dd>jul/2025 a abr/2026</dd></div>
+          <div><dt>Time</dt><dd>Fundadores do cliente, fundadores do estúdio, engenheiros e um gestor de desenvolvimento a partir do mês 6</dd></div>
+        </dl>
+      </div>
+      <figure class="shot"><div class="frame"><img src="img/investment-platform-lp-performance.webp" alt="Visão de performance da carteira: patrimônio, retorno e gráfico mensal" width="1600" height="1000"></div><figcaption>Performance da carteira, na landing page de lançamento que desenhei pro produto.</figcaption></figure>
+      <div class="inshort"><p class="eyebrow">Em resumo</p><p>O cliente chegou só com uma ideia. Conduzi o discovery sozinho, construí com vibe coding um protótipo do produto inteiro em 5 dias, que virou o ponto de partida dos engenheiros, e depois desenhei o produto de verdade, página por página, até ele ir pro ar.</p><a class="jump" href="#r-invest-pt">Pular pros resultados ↓</a></div>
+      <div class="story">
+        <h2>Contexto</h2>
+        <p>O cliente queria virar o lugar de referência pra investidores angolanos verem sua performance real entre várias corretoras. Os usuários eram investidores iniciantes, investidores experientes e assessores de investimento que gerenciam o dinheiro dos próprios clientes. Até então, o cliente tocava o negócio de assessoria em planilhas de Excel.</p>
+        <p class="challenge"><strong>O desafio:</strong> transformar uma visão ambiciosa, com uma lista enorme de desejos, numa primeira versão enxuta, num domínio cheio de termos e lógica financeira que eu precisei aprender rápido.</p>
+        <h2>Discovery</h2>
+        <p>Nas primeiras semanas, eu fazia call com o cliente quase todo dia, e as planilhas deles viraram minha principal fonte pra entender o negócio, os usuários e a lógica financeira por trás de cada número. Trabalhamos com Lean Canvas, event storming e user story mapping.</p>
+        <p>Pra manter as prioridades honestas, criei um canvas em cima do framework Fit for Purpose (David J. Anderson e Alexei Zheglov). Ele conecta por que um cliente usaria o produto, como ele julga se está funcionando e a métrica que mostra isso. Por exemplo: um investidor quer consolidar posições de várias corretoras, julga isso pela rapidez de registrar uma operação, e a métrica é registrar uma operação em menos de 60 segundos.</p>
+        <figure class="ph"><div class="ph-box"><span>Imagem a adicionar</span><strong>Canvas Fit for Purpose</strong></div></figure>
+        <h2>Decisões-chave</h2>
+        <div class="decision"><h3>1. Construir, não só desenhar</h3><p>O cliente precisava ver o produto em dias, não em semanas. As ferramentas de código com IA tinham acabado de tornar possível um designer construir e colocar no ar um protótipo em código sozinho, e esse foi o primeiro projeto de cliente em que eu pude fazer isso. Com o Cursor, construí com vibe coding um protótipo do produto inteiro: 15 páginas em 5 dias, com repositório próprio no GitHub e um deploy no ar que o cliente podia navegar. A ideia não era ser o produto final. O protótipo mostrava a visão completa de uma vez, pro cliente reagir a algo real e pros engenheiros terem um ponto de partida claro pra construir a plataforma de verdade, com arquitetura, dados e funcionalidades.</p></div>
+        <figure class="shot"><div class="frame"><img src="img/investment-platform-prototype-pages.webp" alt="Seis páginas do protótipo de 5 dias: carteira, transações, insights, indicadores, contas de custódia e login" width="1600" height="764" loading="lazy"></div><figcaption>Seis das 15 páginas do protótipo de 5 dias, como foi publicado.</figcaption></figure>
+        <div class="decision"><h3>2. Cortar até o essencial</h3><p>O cliente sonhava com muito mais: simulação de compra e venda, área de aprendizado, notícias, comunidade, gamificação e, um dia, virar uma corretora. Com o canvas como referência, cada feature tinha que servir a um propósito do cliente e a uma métrica. O MVP focou no que os investidores precisavam primeiro: registrar suas posições e acompanhar o volume da carteira. O resto foi pro roadmap.</p></div>
+        <div class="decision"><h3>3. Um modelo de conta pra investidores e assessores</h3><p>O produto tinha que funcionar tanto pra quem investe o próprio dinheiro quanto pra assessores que gerenciam o de outras pessoas. Desenhei a experiência pra que uma conta pudesse existir sozinha ou ter clientes vinculados, e trabalhei com o gestor de desenvolvimento no modelo de dados por trás disso.</p></div>
+        <figure class="shot"><div class="frame"><img src="img/investment-platform-lp-audiences.webp" alt="Dois tipos de conta lado a lado: um investidor com uma carteira e um assessor com uma carteira por cliente" width="1600" height="1542" loading="lazy"></div><figcaption>A mesma ideia na landing page de lançamento: um produto pra investidores e pra assessores com clientes vinculados.</figcaption></figure>
+        <h2 id="r-invest-pt">Resultados</h2>
+        <ul class="results">
+          <li><strong>O produto está no ar.</strong> Depois do protótipo, desenhei o produto de verdade, página por página, com muito mais profundidade e acabamento, enquanto adotávamos bibliotecas de componentes de front-end junto com os engenheiros. O esqueleto daqueles 5 dias continua lá; a qualidade visual está em outro nível.</li>
+          <li>O canvas virou a referência do cliente pra priorização, conectando o valor que ele queria entregar a resultados mensuráveis.</li>
+        </ul>
+        <figure class="shot"><div class="frame"><img src="img/investment-platform-prototype.webp" alt="O protótipo de 5 dias: página de performance da carteira com dados de demonstração" width="1600" height="1145" loading="lazy"></div><figcaption>O protótipo de 5 dias: a mesma página de performance da carteira, rodando com dados de demonstração.</figcaption></figure>
+        <figure class="shot"><div class="frame"><img src="img/investment-platform-performance.webp" alt="Produto no ar: página de performance da carteira" width="1600" height="1145" loading="lazy"></div><figcaption>O produto no ar: página de performance da carteira. Logo do cliente borrada.</figcaption></figure>
+        <h2>O que eu faria diferente</h2>
+        <p>Eu testaria o protótipo diretamente com investidores e assessores antes do desenvolvimento, não só com o time do cliente. E transformaria as fitness metrics em métricas de lançamento desde o primeiro dia, pra gente medir o produto com a mesma linguagem que usamos pra desenhá-lo.</p>
+      </div>
+    </div>
+    <nav class="next"><a href="#work"><span class="l-en">← All work</span><span class="l-pt">← Todos os cases</span></a><a href="#work-ai-marketing"><span class="eyebrow"><span class="l-en">Next case</span><span class="l-pt">Próximo case</span></span><strong><span class="l-en">AI marketing tool →</span><span class="l-pt">Ferramenta de marketing com IA →</span></strong></a></nav>
+  </div>
+</section>
+
+<!-- ============ CASE: AI MARKETING ============ -->
+<section data-view="work-ai-marketing">
+  <div class="wrap case">
+    <a class="back" href="#work"><span class="l-en">← All work</span><span class="l-pt">← Todos os cases</span></a>
+
+    <div class="l-en">
+      <div class="case-head">
+        <p class="eyebrow">Case study · AI product</p>
+        <h1>How I helped a founder find out if his idea was worth building, then designed the AI product through to a finished MVP</h1>
+        <dl class="spec">
+          <div><dt>Role</dt><dd>Product Designer (sole designer), leading discovery</dd></div>
+          <div><dt>Client</dt><dd>First-time founder of an AI marketing tool for small local businesses in Brazil, through a product studio</dd></div>
+          <div><dt>Platform</dt><dd>Web</dd></div>
+          <div><dt>Period</dt><dd>Mar 2025 to 2026</dd></div>
+          <div><dt>Team</dt><dd>The founder, studio leadership, a development manager and engineers in the build phase</dd></div>
+        </dl>
+      </div>
+      <div class="inshort"><p class="eyebrow">In short</p><p>A founder paid for a discovery to find out if his AI marketing tool for small shops was worth building. I ran it on my own. The answer turned into a build contract, and I designed the MVP, which is live.</p><a class="jump" href="#r-ai">Jump to results ↓</a></div>
+      <div class="story">
+        <h2>Context</h2>
+        <p>The founder, a sales director with no tech background, came with an idea and a question. Small shop owners (a bakery, a pizzeria, a salon) can't afford an agency: a typical owner paid R$3,500 a month for someone to run their marketing. What if AI did that job for less than R$200? Before investing in a product, he wanted to know if it was worth building.</p>
+        <p class="challenge"><strong>The challenge:</strong> answer "should I build this?" with evidence, not enthusiasm, and if the answer was yes, design the product that could prove it.</p>
+        <h2>Discovery</h2>
+        <p>I ran the discovery on my own, from planning to every artifact, over two months of sessions with the founder.</p>
+        <ul>
+          <li><strong>CSD matrix</strong> (certainties, assumptions, doubts) to separate facts from guesses.</li>
+          <li><strong>Market analysis</strong> grounded in Sebrae's national survey: 19 million small businesses in Brazil, "lack of customers" as their second biggest difficulty (31%), and 52% had never paid for an online ad.</li>
+          <li><strong>Benchmark</strong> of five tools, from RD Station and HubSpot to Meta Ads: powerful, but built for marketers. The gap was simplicity, not features.</li>
+          <li><strong>Jobs to be done</strong> and a <strong>job map</strong> with a measurable hypothesis for every step.</li>
+          <li><strong>Cost analysis:</strong> about US$50 a month to run the product for 100 active users, so two subscribers at R$150 would cover the technical cost.</li>
+        </ul>
+        <p>The answer was yes, and the founder hired the studio to build the MVP.</p>
+        <figure class="shot"><div class="frame"><img src="img/ai-marketing-csd.webp" alt="CSD matrix with certainties, assumptions and doubts on sticky notes" width="1800" height="1545" loading="lazy"></div><figcaption>CSD matrix: what we knew, what we assumed and what we still had to answer.</figcaption></figure>
+        <figure class="shot"><div class="frame"><img src="img/ai-marketing-job-map.webp" alt="Job map: each step the store owner goes through, paired with a measurable hypothesis" width="1800" height="1369" loading="lazy"></div><figcaption>Job map: every step the owner goes through, each paired with a measurable hypothesis.</figcaption></figure>
+        <h2>Key decisions</h2>
+        <div class="decision"><h3>1. Turn the idea into six testable bets</h3><p>I wrote six hypotheses in the order the customer would live them, from landing page to paying customer, each with a target. For example: at least 60% of first attempts end with a campaign created, in under 20 minutes. I asked the founder which one mattered most, and his answer became the core bet: owners with little tech familiarity will pay for a tool that creates and distributes geolocated ads in a few clicks.</p></div>
+        <div class="decision"><h3>2. Build the riskiest part first</h3><p>Sign-up and campaign settings were solved problems. The real risk was whether AI-generated images would be good enough for an owner to put their business name on them. So the build started with that slice of the MVP, under the goal "delight the store owner in 15 minutes", and the founder put it in front of 5 store owners in his region. The images were good enough, and the rest of the MVP followed.</p></div>
+        <div class="decision"><h3>3. A conversation instead of a form</h3><p>The founder's rule was "the owner can't have to think". We chose a guided chat over a form, and I designed it in three steps (my business, my customer, my campaign) and wrote the first version of the questions the AI asks. The first two steps are filled only once, so every new campaign starts from what the system already knows. From the event storming, I sketched a low-fidelity screen for each event, and from there designed every screen of the MVP.</p></div>
+        <figure class="shot"><div class="frame"><img src="img/ai-marketing-event-storming.webp" alt="Event storming of the full journey, from sign-up to campaign results" width="2400" height="452" loading="lazy"></div><figcaption>Event storming: the full journey, from sign-up to campaign results.</figcaption></figure>
+        <figure class="ph"><div class="ph-box"><span>Image to add</span><strong>Low-fidelity sketches and MVP screens</strong></div></figure>
+        <h2 id="r-ai">Results</h2>
+        <ul class="results">
+          <li>The paid discovery turned into a <strong>build contract</strong> with the studio.</li>
+          <li>The <strong>MVP was delivered and is live</strong>: an owner signs up, tells the AI about their business and customers, gets a ready campaign with AI-generated images they can adjust until they approve, and publishes it to Meta from inside the product.</li>
+        </ul>
+        <h2>What I'd do differently</h2>
+        <p>I'd test the flow with store owners myself during the build, not only through the founder, and I'd measure what owners care about most, people walking into the shop, from the first version. The MVP was designed before AI design tools were part of my process, so I recently redesigned the entire interface with what I know now. It hasn't been built yet.</p>
+        <figure class="ph"><div class="ph-box"><span>Image to add</span><strong>Live MVP vs. redesign</strong></div></figure>
+      </div>
+    </div>
+
+    <div class="l-pt">
+      <div class="case-head">
+        <p class="eyebrow">Case · Produto com IA</p>
+        <h1>Como eu ajudei um fundador a descobrir se a ideia dele valia a pena, e depois desenhei o produto com IA até um MVP concluído</h1>
+        <dl class="spec">
+          <div><dt>Cargo</dt><dd>Product Designer (único designer), conduzindo o discovery</dd></div>
+          <div><dt>Cliente</dt><dd>Fundador de primeira viagem de uma ferramenta de marketing com IA para pequenos negócios locais no Brasil, via estúdio de produto</dd></div>
+          <div><dt>Plataforma</dt><dd>Web</dd></div>
+          <div><dt>Período</dt><dd>mar/2025 a 2026</dd></div>
+          <div><dt>Time</dt><dd>O fundador, a liderança do estúdio, um gestor de desenvolvimento e engenheiros na fase de construção</dd></div>
+        </dl>
+      </div>
+      <div class="inshort"><p class="eyebrow">Em resumo</p><p>Um fundador pagou por um discovery para descobrir se a ferramenta de marketing com IA dele, para pequenos lojistas, valia a pena. Eu conduzi sozinho. A resposta virou um contrato de construção, e eu desenhei o MVP, que está no ar.</p><a class="jump" href="#r-ai-pt">Pular pros resultados ↓</a></div>
+      <div class="story">
+        <h2>Contexto</h2>
+        <p>O fundador, diretor comercial sem experiência em tecnologia, chegou com uma ideia e uma pergunta. Donos de pequenos negócios (uma padaria, uma pizzaria, um salão) não conseguem pagar uma agência: um dono típico pagava R$3.500 por mês para alguém cuidar do marketing dele. E se a IA fizesse esse trabalho por menos de R$200? Antes de investir num produto, ele queria saber se valia a pena construir.</p>
+        <p class="challenge"><strong>O desafio:</strong> responder "devo construir isso?" com evidências, não com empolgação, e, se a resposta fosse sim, desenhar o produto capaz de provar isso.</p>
+        <h2>Discovery</h2>
+        <p>Conduzi o discovery sozinho, do planejamento a cada artefato, ao longo de dois meses de sessões com o fundador.</p>
+        <ul>
+          <li><strong>Matriz CSD</strong> (certezas, suposições, dúvidas) para separar fatos de palpites.</li>
+          <li><strong>Análise de mercado</strong> com base na pesquisa nacional do Sebrae: 19 milhões de pequenos negócios no Brasil, "falta de clientes" como a segunda maior dificuldade (31%), e 52% nunca tinham pago por um anúncio online.</li>
+          <li><strong>Benchmark</strong> de cinco ferramentas, de RD Station e HubSpot a Meta Ads: poderosas, mas feitas para profissionais de marketing. A lacuna era simplicidade, não funcionalidades.</li>
+          <li><strong>Jobs to be done</strong> e um <strong>job map</strong> com uma hipótese mensurável para cada etapa.</li>
+          <li><strong>Análise de custos:</strong> cerca de US$50 por mês para rodar o produto com 100 usuários ativos, ou seja, dois assinantes de R$150 cobririam o custo técnico.</li>
+        </ul>
+        <p>A resposta foi sim, e o fundador contratou o estúdio para construir o MVP.</p>
+        <figure class="shot"><div class="frame"><img src="img/ai-marketing-csd.webp" alt="Matriz CSD com certezas, suposições e dúvidas em post-its" width="1800" height="1545" loading="lazy"></div><figcaption>Matriz CSD: o que a gente sabia, o que supunha e o que ainda precisava responder.</figcaption></figure>
+        <figure class="shot"><div class="frame"><img src="img/ai-marketing-job-map.webp" alt="Job map: cada etapa do lojista ligada a uma hipótese mensurável" width="1800" height="1369" loading="lazy"></div><figcaption>Job map: cada etapa que o lojista percorre, ligada a uma hipótese mensurável.</figcaption></figure>
+        <h2>Decisões-chave</h2>
+        <div class="decision"><h3>1. Transformar a ideia em seis apostas testáveis</h3><p>Escrevi seis hipóteses na ordem em que o cliente as viveria, da landing page até o cliente pagante, cada uma com uma meta. Por exemplo: pelo menos 60% das primeiras tentativas terminam com uma campanha criada, em menos de 20 minutos. Perguntei ao fundador qual era a mais importante, e a resposta dele virou a aposta central: donos de negócio com pouca familiaridade com tecnologia vão pagar por uma ferramenta que cria e distribui anúncios geolocalizados em poucos cliques.</p></div>
+        <div class="decision"><h3>2. Construir primeiro a parte mais arriscada</h3><p>Cadastro e configuração de campanha eram problemas resolvidos. O risco real era se as imagens geradas por IA seriam boas o suficiente para um dono colocar o nome do negócio nelas. Então a construção começou por essa fatia do MVP, com o objetivo "encantar o lojista em 15 minutos", e o fundador colocou ela na frente de 5 lojistas da região dele. As imagens foram boas o suficiente, e o resto do MVP veio em seguida.</p></div>
+        <div class="decision"><h3>3. Uma conversa em vez de um formulário</h3><p>A regra do fundador era "o lojista não pode precisar pensar". Escolhemos um chat guiado em vez de um formulário, e eu desenhei ele em três etapas (meu negócio, meu cliente, minha campanha) e escrevi a primeira versão das perguntas que a IA faz. As duas primeiras etapas são preenchidas uma única vez, então cada nova campanha começa do que o sistema já sabe. A partir do event storming, esbocei uma tela de baixa fidelidade para cada evento e, dali, desenhei todas as telas do MVP.</p></div>
+        <figure class="shot"><div class="frame"><img src="img/ai-marketing-event-storming.webp" alt="Event storming da jornada completa, do cadastro aos resultados da campanha" width="2400" height="452" loading="lazy"></div><figcaption>Event storming: a jornada completa, do cadastro aos resultados da campanha.</figcaption></figure>
+        <figure class="ph"><div class="ph-box"><span>Imagem a adicionar</span><strong>Esboços de baixa fidelidade e telas do MVP</strong></div></figure>
+        <h2 id="r-ai-pt">Resultados</h2>
+        <ul class="results">
+          <li>O discovery pago virou um <strong>contrato de construção</strong> com o estúdio.</li>
+          <li>O <strong>MVP foi entregue e está no ar</strong>: o lojista se cadastra, conta para a IA sobre o negócio e os clientes dele, recebe uma campanha pronta com imagens geradas por IA, que ele pode ajustar até aprovar, e publica o anúncio na Meta sem sair do produto.</li>
+        </ul>
+        <h2>O que eu faria diferente</h2>
+        <p>Eu testaria o fluxo com os lojistas eu mesmo durante a construção, não só por meio do fundador, e mediria o que mais importa para os lojistas, gente entrando na loja, desde a primeira versão. O MVP foi desenhado antes de as ferramentas de design com IA fazerem parte do meu processo, então recentemente redesenhei a interface inteira com o que eu sei hoje. Ela ainda não foi implementada.</p>
+        <figure class="ph"><div class="ph-box"><span>Imagem a adicionar</span><strong>MVP no ar x redesign</strong></div></figure>
+      </div>
+    </div>
+    <nav class="next"><a href="#work-investment-platform"><span class="eyebrow"><span class="l-en">Previous case</span><span class="l-pt">Case anterior</span></span><strong><span class="l-en">← Investment platform</span><span class="l-pt">← Plataforma de investimentos</span></strong></a><a href="#work-recurring-orders"><span class="eyebrow"><span class="l-en">Next case</span><span class="l-pt">Próximo case</span></span><strong><span class="l-en">Recurring order program →</span><span class="l-pt">Programa de pedido recorrente →</span></strong></a></nav>
+  </div>
+</section>
+
+<!-- ============ CASE: RECURRING ORDERS ============ -->
+<section data-view="work-recurring-orders">
+  <div class="wrap case">
+    <a class="back" href="#work"><span class="l-en">← All work</span><span class="l-pt">← Todos os cases</span></a>
+
+    <div class="l-en">
+      <div class="case-head">
+        <p class="eyebrow">Case study · Retail</p>
+        <h1>How I designed a recurring order program that lifted order frequency from 1.6 to 2.8 a month</h1>
+        <dl class="spec">
+          <div><dt>Role</dt><dd>Product Designer</dd></div>
+          <div><dt>Company</dt><dd>Hortifruti Natural da Terra, Brazil's largest fresh-produce retail chain</dd></div>
+          <div><dt>Platform</dt><dd>Web + WhatsApp</dd></div>
+          <div><dt>Year</dt><dd>2022</dd></div>
+          <div><dt>Team</dt><dd>Head of design, product owner, 2 engineers, 2 other designers</dd></div>
+        </dl>
+      </div>
+      <div class="inshort"><p class="eyebrow">In short</p><p>I designed a recurring order program for Hortifruti's WhatsApp ordering channel. Orders per customer rose from 1.6 to 2.8 a month, the program reached 13% of WhatsApp sales in its first year, became the company's highest-NPS initiative, and is still live four years later.</p><a class="jump" href="#r-horti">Jump to results ↓</a></div>
+      <div class="story">
+        <h2>Context</h2>
+        <p>It started informally: some customers began sending their shopping list, line by line, to their local store's WhatsApp. The stores were happy to take the orders, so the company built a product around the habit: WhatsApp HNT, a simple web page where customers write their list the same way and the order goes straight to the store. It caught on fast with Hortifruti's core customers: middle-aged, with above-average income and not very comfortable with technology.</p>
+        <p>Some of them were already reordering on their own, sending roughly the same list from time to time. But nothing encouraged it: no name, no reward and no way for stores to plan ahead. On average, a customer placed 1.6 orders a month. The company decided to turn that into a recurring order program.</p>
+        <p class="challenge"><strong>The challenge:</strong> turn an informal habit into a program the business could count on, without asking customers to learn anything new.</p>
+        <h2>What I learned before designing</h2>
+        <p>I started by talking to the head of design and to the store managers who handled these orders every day. Then, over one week, I went on three visits to two stores with the product team, following an order from the moment it arrived, through picking and packing, to the bags waiting for the courier.</p>
+        <p>The key finding: customers didn't need a new way to buy. What was missing was a reason to order more often, a name for the habit and predictability for the stores. Each decision below answers one of those.</p>
+        <figure class="ph"><div class="ph-box"><span>Image to add</span><strong>Order journey inside the store</strong></div></figure>
+        <h2>Key decisions</h2>
+        <div class="decision"><h3>1. A reason to order more often: rewards built around frequency</h3><p>I proposed tiered rewards tied to orders per month: 3 orders unlock a 10% coupon for the next month, 4 orders unlock 20%, on top of a fixed 5% discount and free delivery. I set the first tier at 3 because the average was 1.6, so the target had to pull customers above their current habit. The head of design then calibrated the percentages to what the business could afford.</p></div>
+        <div class="decision"><h3>2. Predictability without a subscription</h3><p>Scheduled orders gave stores a plan, but for an older audience with low digital maturity, an automatic charge was a risk. So the program was built around confirmation: two days before delivery, customers get their pre-filled list on WhatsApp and can edit, confirm or cancel it. The explainer I designed says it upfront: "It's not a subscription."</p></div>
+        <div class="decision"><h3>3. Same list, new schedule</h3><p>In the order screen, customers wrote their list in a single free-text field, just as they already did, and the screen added only what recurrence needs: frequency, day, delivery window, substitution preferences and a summary before confirming. In about three weeks I designed every screen of the feature, from the login to the full recurring order setup.</p></div>
+        <figure class="ph"><div class="ph-box"><span>Image to add</span><strong>Order type choice, explainer modal and recurring order setup</strong></div></figure>
+        <h2 id="r-horti">Results</h2>
+        <ul class="results">
+          <li>Average orders per customer rose from <strong>1.6 to 2.8 a month</strong> after launch.</li>
+          <li>In its first year, the program reached <strong>25,000+ recurring purchases</strong>, <strong>1,200+ active recurring orders</strong> and <strong>13% of WhatsApp sales</strong>, and became <strong>the company's highest-NPS initiative</strong> (<a href="https://gironews.com/supermercado/pedidos-recorrentes-71239/" target="_blank" rel="noopener">Giro News, March 2023</a>).</li>
+          <li>More than four years later, the login, the order type choice, the explainer and the reward mechanics are <strong>still live and unchanged</strong>.</li>
+        </ul>
+        <h2>What I'd do differently</h2>
+        <p>I'd push for clear metrics from day one: the program clearly worked, but I didn't track how many customers reached each tier. And four years without changes isn't a goal in itself. If I were there today, I'd test the flow with customers again, because something can always be better.</p>
+      </div>
+    </div>
+
+    <div class="l-pt">
+      <div class="case-head">
+        <p class="eyebrow">Case · Varejo</p>
+        <h1>Como eu desenhei um programa de pedido recorrente que levou a frequência de 1,6 para 2,8 pedidos por mês</h1>
+        <dl class="spec">
+          <div><dt>Cargo</dt><dd>Product Designer</dd></div>
+          <div><dt>Empresa</dt><dd>Hortifruti Natural da Terra, a maior rede de hortifrúti do Brasil</dd></div>
+          <div><dt>Plataforma</dt><dd>Web + WhatsApp</dd></div>
+          <div><dt>Ano</dt><dd>2022</dd></div>
+          <div><dt>Time</dt><dd>Head de design, product owner, 2 engenheiros, 2 outros designers</dd></div>
+        </dl>
+      </div>
+      <div class="inshort"><p class="eyebrow">Em resumo</p><p>Desenhei um programa de pedido recorrente para o canal de pedidos por WhatsApp da Hortifruti. Os pedidos por cliente subiram de 1,6 para 2,8 por mês, o programa chegou a 13% das vendas pelo WhatsApp no primeiro ano, virou a frente com maior NPS da companhia e continua no ar quatro anos depois.</p><a class="jump" href="#r-horti-pt">Pular pros resultados ↓</a></div>
+      <div class="story">
+        <h2>Contexto</h2>
+        <p>Começou de forma informal: alguns clientes passaram a mandar a lista de compras, linha por linha, para o WhatsApp da loja do bairro. As lojas aceitavam os pedidos de bom grado, então a empresa construiu um produto em torno do hábito: o WhatsApp HNT, uma página web simples onde o cliente escreve a lista do mesmo jeito e o pedido vai direto para a loja. O canal pegou rápido com o público principal da Hortifruti: meia-idade, renda acima da média e pouca intimidade com tecnologia.</p>
+        <p>Alguns desses clientes já repetiam pedidos por conta própria, mandando mais ou menos a mesma lista de tempos em tempos. Mas nada incentivava isso: nenhum nome, nenhuma recompensa e nenhuma forma de as lojas se planejarem. Em média, um cliente fazia 1,6 pedido por mês. A empresa decidiu transformar isso num programa de pedido recorrente.</p>
+        <p class="challenge"><strong>O desafio:</strong> transformar um hábito informal num programa com que o negócio pudesse contar, sem pedir que os clientes aprendessem nada novo.</p>
+        <h2>O que eu aprendi antes de desenhar</h2>
+        <p>Comecei conversando com o head de design e com os gerentes de loja que lidavam com esses pedidos todo dia. Depois, ao longo de uma semana, fiz três visitas a duas lojas com o time de produto, acompanhando um pedido desde a chegada, passando pela separação e embalagem, até as sacolas esperando o entregador.</p>
+        <p>A principal descoberta: os clientes não precisavam de um novo jeito de comprar. Faltava um motivo para pedir com mais frequência, um nome para o hábito e previsibilidade para as lojas. Cada decisão abaixo responde a um desses pontos.</p>
+        <figure class="ph"><div class="ph-box"><span>Imagem a adicionar</span><strong>Jornada do pedido dentro da loja</strong></div></figure>
+        <h2>Decisões-chave</h2>
+        <div class="decision"><h3>1. Um motivo para pedir mais: recompensas pela frequência</h3><p>Propus recompensas em faixas, ligadas a pedidos por mês: 3 pedidos liberam um cupom de 10% para o mês seguinte, 4 pedidos liberam 20%, além de um desconto fixo de 5% e frete grátis. Coloquei a primeira faixa em 3 porque a média era 1,6, então a meta precisava puxar o cliente para acima do hábito atual. O head de design depois calibrou os percentuais para o que o negócio podia bancar.</p></div>
+        <div class="decision"><h3>2. Previsibilidade sem assinatura</h3><p>Pedidos agendados davam um plano para as lojas, mas, para um público mais velho e com pouca maturidade digital, uma cobrança automática era um risco. Então o programa foi construído em torno de confirmação: dois dias antes da entrega, o cliente recebe a lista pré-preenchida no WhatsApp e pode editar, confirmar ou cancelar. O explicativo que eu desenhei diz isso logo de cara: "Não é uma assinatura."</p></div>
+        <div class="decision"><h3>3. Mesma lista, nova agenda</h3><p>Na tela de pedido, o cliente escrevia a lista num único campo de texto livre, como já fazia, e a tela acrescentava só o que a recorrência exige: frequência, dia, janela de entrega, preferências de substituição e um resumo antes de confirmar. Em cerca de três semanas, desenhei todas as telas da funcionalidade, do login à configuração completa do pedido recorrente.</p></div>
+        <figure class="ph"><div class="ph-box"><span>Imagem a adicionar</span><strong>Escolha do tipo de pedido, modal explicativo e configuração do pedido recorrente</strong></div></figure>
+        <h2 id="r-horti-pt">Resultados</h2>
+        <ul class="results">
+          <li>A média de pedidos por cliente subiu de <strong>1,6 para 2,8 por mês</strong> depois do lançamento.</li>
+          <li>No primeiro ano, o programa chegou a <strong>mais de 25 mil compras recorrentes</strong>, <strong>mais de 1.200 recorrências ativas</strong> e <strong>13% das vendas pelo WhatsApp</strong>, e virou <strong>a frente com maior NPS da companhia</strong> (<a href="https://gironews.com/supermercado/pedidos-recorrentes-71239/" target="_blank" rel="noopener">Giro News, março de 2023</a>).</li>
+          <li>Mais de quatro anos depois, o login, a escolha do tipo de pedido, o explicativo e a mecânica de recompensas <strong>continuam no ar, sem mudanças</strong>.</li>
+        </ul>
+        <h2>O que eu faria diferente</h2>
+        <p>Eu cobraria métricas claras desde o primeiro dia: o programa claramente funcionou, mas eu não acompanhei quantos clientes chegaram a cada faixa. E quatro anos sem mudanças não é um objetivo em si. Se eu estivesse lá hoje, testaria o fluxo com os clientes de novo, porque sempre dá para melhorar alguma coisa.</p>
+      </div>
+    </div>
+    <nav class="next"><a href="#work-ai-marketing"><span class="eyebrow"><span class="l-en">Previous case</span><span class="l-pt">Case anterior</span></span><strong><span class="l-en">← AI marketing tool</span><span class="l-pt">← Ferramenta de marketing com IA</span></strong></a><a href="#work"><span class="eyebrow"><span class="l-en">Back to</span><span class="l-pt">Voltar para</span></span><strong><span class="l-en">All work →</span><span class="l-pt">Todos os cases →</span></strong></a></nav>
+  </div>
+</section>
+</main>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="eyebrow"><span class="l-en">Contact</span><span class="l-pt">Contato</span></p>
+    <h2><span class="l-en">Have a product that needs to go from idea to launch?</span><span class="l-pt">Tem um produto que precisa ir da ideia ao lançamento?</span></h2>
+    <div class="contact-lines">
+      <button class="btn" type="button" id="copy-email"><span class="l-en">Copy email</span><span class="l-pt">Copiar e-mail</span></button>
+      <a class="btn ghost" href="https://www.linkedin.com/in/jvdeiro/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn ghost l-en" href="joao-deiro-cv.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+      <a class="btn ghost l-pt" href="joao-deiro-cv-pt.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+    </div>
+    <p class="copy" id="email-text">joao.couto98@outlook.com</p>
+    <p class="note">Rio de Janeiro, UTC-3.</p>
+  </div>
+  <footer class="wrap"><span class="l-en">Designed and built with AI coding tools · 2026</span><span class="l-pt">Desenhado e construído com ferramentas de código com IA · 2026</span></footer>
+</section>
+
+<script>
+(function(){
+  var root = document.documentElement;
+
+  /* language */
+  function setLang(l){
+    root.setAttribute('data-lang', l);
+    root.setAttribute('lang', l === 'pt' ? 'pt-BR' : 'en');
+    document.querySelectorAll('[data-set-lang]').forEach(function(b){ b.setAttribute('aria-pressed', String(b.getAttribute('data-set-lang') === l)); });
+    try { localStorage.setItem('lang', l); } catch(e){}
+  }
+  var saved = null;
+  try { saved = localStorage.getItem('lang'); } catch(e){}
+  var nav = (navigator.language || '').toLowerCase();
+  setLang(saved || (nav.indexOf('pt') === 0 ? 'pt' : 'en'));
+  document.querySelectorAll('[data-set-lang]').forEach(function(b){
+    b.addEventListener('click', function(){ setLang(b.getAttribute('data-set-lang')); });
+  });
+
+  /* views */
+  var views = document.querySelectorAll('[data-view]');
+  function route(){
+    var h = (location.hash || '').slice(1);
+    var target = document.querySelector('[data-view="' + h + '"]');
+    var name = target ? h : 'home';
+    var current = document.querySelector('[data-view].on');
+    var el = !target && h ? document.getElementById(h) : null;
+    if (el && current && current.contains(el)) { el.scrollIntoView(); return; }
+    views.forEach(function(v){ v.classList.toggle('on', v.getAttribute('data-view') === name); });
+    if (target) { window.scrollTo(0, 0); return; }
+    el = h && document.getElementById(h);
+    if (el) { el.scrollIntoView(); } else if (!h) { window.scrollTo(0, 0); }
+  }
+  window.addEventListener('hashchange', route);
+  route();
+
+  /* copy email */
+  var btn = document.getElementById('copy-email');
+  var text = document.getElementById('email-text');
+  btn.addEventListener('click', function(){
+    var pt = root.getAttribute('data-lang') === 'pt';
+    var label = btn.innerHTML;
+    function done(){ btn.textContent = pt ? 'E-mail copiado' : 'Email copied'; setTimeout(function(){ btn.innerHTML = label; }, 2000); }
+    function fallback(){ var r = document.createRange(); r.selectNodeContents(text); var s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+    try { navigator.clipboard.writeText(text.textContent.trim()).then(done, fallback); } catch(e){ fallback(); }
+  });
+})();
+</script>
+
+</body></html>
