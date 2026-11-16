@@ -128,17 +128,22 @@ p{margin:0}
 /* contact */
 .contact{border-top:1px solid var(--line)}
 .contact .wrap{padding-block:80px 88px;display:grid;gap:22px}
-.email-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px}
-.copy{text-decoration:none}
-.copy:hover{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:6px}
-.copy-btn{display:inline-flex;align-items:center;gap:7px;font:500 14px/1 var(--body);padding:9px 13px;border-radius:999px;border:1px solid color-mix(in srgb, var(--fg) 25%, transparent);background:transparent;color:var(--fg);cursor:pointer}
-.copy-btn:hover{border-color:var(--fg)}
-.contact-cards{display:flex;flex-wrap:wrap;gap:12px}
+.contact-cards{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px}
 .ccard{display:flex;align-items:center;gap:14px;padding:10px 20px 10px 10px;border:1px solid color-mix(in srgb, var(--fg) 18%, transparent);border-radius:12px;text-decoration:none;min-width:210px}
 .ccard:hover{border-color:var(--fg)}
 .ccard .ic{width:44px;height:44px;border-radius:8px;display:grid;place-items:center;flex:none}
 .ccard .li{background:#0A66C2;color:#fff}
 .ccard .thumb{width:44px;height:57px;object-fit:cover;object-position:top;border-radius:3px;border:1px solid var(--line);background:#fff;flex:none}
+.ccard-mail{padding-right:10px}
+.ccard .mail{background:var(--fg);color:var(--bg)}
+.mail-txt{display:grid;min-width:0}
+.mail-txt a{color:var(--muted);font-size:14px;line-height:1.3;text-decoration:none;overflow-wrap:anywhere}
+.mail-txt a:hover{color:var(--fg);text-decoration:underline;text-underline-offset:3px}
+.copy-btn{display:inline-grid;place-items:center;width:34px;height:34px;margin-left:6px;padding:0;border-radius:8px;border:1px solid color-mix(in srgb, var(--fg) 20%, transparent);background:transparent;color:var(--fg);cursor:pointer;flex:none}
+.copy-btn:hover{border-color:var(--fg)}
+.copy-btn .i-check{display:none}
+.copy-btn.ok .i-check{display:block;color:var(--accent)}
+.copy-btn.ok .i-copy{display:none}
 .ccard strong{display:block;font-weight:500;line-height:1.3}
 .ccard small{display:block;color:var(--muted);font-size:14px;line-height:1.3}
 .copy{font-family:var(--display);font-size:clamp(26px,3.6vw,40px);line-height:1.1}
@@ -545,11 +550,8 @@ footer{font-size:13px;color:var(--muted);padding-block:0 40px}
   <div class="wrap">
     <p class="eyebrow"><span class="l-en">Contact</span><span class="l-pt">Contato</span></p>
     <h2><span class="l-en">Have a product that needs to go from idea to launch?</span><span class="l-pt">Tem um produto que precisa ir da ideia ao lançamento?</span></h2>
-    <div class="email-row">
-      <a class="copy" id="email-text" href="mailto:joao.couto98@outlook.com">joao.couto98@outlook.com</a>
-      <button class="copy-btn" type="button" id="copy-email"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span class="cb-label"><span class="l-en">Copy</span><span class="l-pt">Copiar</span></span></button>
-    </div>
     <div class="contact-cards">
+      <div class="ccard ccard-mail"><span class="ic mail"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg></span><span class="mail-txt"><strong><span class="l-en">Email</span><span class="l-pt">E-mail</span></strong><a href="mailto:joao.couto98@outlook.com" id="email-text">joao.couto98@outlook.com</a></span><button class="copy-btn" type="button" id="copy-email" aria-label="Copy email" title="Copy email"><svg class="i-copy" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><svg class="i-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></button></div>
       <a class="ccard" href="https://www.linkedin.com/in/jvdeiro/" target="_blank" rel="noopener"><span class="ic li"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3zM9.5 9.75h3.8v1.5h.06c.53-1 1.83-1.8 3.42-1.8 3.66 0 4.22 2.24 4.22 5.16v6.14h-4v-5.44c0-1.3-.02-2.97-1.81-2.97-1.81 0-2.09 1.41-2.09 2.87v5.54h-4z"/></svg></span><span><strong>LinkedIn</strong><small>in/jvdeiro</small></span></a>
       <a class="ccard l-en" href="joao-deiro-cv.pdf" target="_blank" rel="noopener"><img class="thumb" src="img/cv-thumb-en.webp" alt="" width="264" height="340"><span><strong>CV</strong><small>PDF, 1 page</small></span></a>
       <a class="ccard l-pt" href="joao-deiro-cv-pt.pdf" target="_blank" rel="noopener"><img class="thumb" src="img/cv-thumb-pt.webp" alt="" width="264" height="340"><span><strong>Currículo</strong><small>PDF, 1 página</small></span></a>
@@ -607,11 +609,9 @@ footer{font-size:13px;color:var(--muted);padding-block:0 40px}
   /* copy email */
   var btn = document.getElementById('copy-email');
   var text = document.getElementById('email-text');
-  var lab = btn.querySelector('.cb-label');
   btn.addEventListener('click', function(){
     var pt = root.getAttribute('data-lang') === 'pt';
-    var label = lab.innerHTML;
-    function done(){ lab.textContent = pt ? 'Copiado' : 'Copied'; setTimeout(function(){ lab.innerHTML = label; }, 2000); }
+    function done(){ btn.classList.add('ok'); btn.setAttribute('aria-label', pt ? 'E-mail copiado' : 'Email copied'); setTimeout(function(){ btn.classList.remove('ok'); btn.setAttribute('aria-label', 'Copy email'); }, 2000); }
     function fallback(){ var r = document.createRange(); r.selectNodeContents(text); var s = getSelection(); s.removeAllRanges(); s.addRange(r); }
     try { navigator.clipboard.writeText(text.textContent.trim()).then(done, fallback); } catch(e){ fallback(); }
   });
