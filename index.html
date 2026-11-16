@@ -176,6 +176,15 @@ footer{font-size:13px;color:var(--muted);padding-block:0 40px}
 .next a{text-decoration:none;display:grid;gap:4px}
 .next a strong{font-family:var(--display);font-weight:400;font-size:26px}
 
+/* case layout: centered reading column, wide figures */
+.case-head{max-width:900px;margin-inline:auto}
+.inshort{margin-inline:auto;width:100%;max-width:720px}
+.story{margin-inline:auto;max-width:720px;grid-template-columns:minmax(0,1fr)}
+.story > figure{justify-self:center;width:min(1000px, calc(100vw - 40px))}
+.case .back{display:block;max-width:900px;margin-inline:auto}
+.next{max-width:900px;margin-inline:auto}
+figure.ph{display:none}
+
 [data-view]{display:none}
 [data-view].on{display:block}
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
@@ -217,7 +226,7 @@ footer{font-size:13px;color:var(--muted);padding-block:0 40px}
 
     <div class="receipts">
       <div class="receipt"><p class="fig"><span class="l-en">1.6 <b>→</b> 2.8</span><span class="l-pt">1,6 <b>→</b> 2,8</span></p><p class="what"><span class="l-en">orders per customer a month, after a recurring order program I designed for Brazil's largest fresh-produce chain</span><span class="l-pt">pedidos por cliente por mês, depois de um programa de pedido recorrente que desenhei para a maior rede de alimentos frescos do Brasil</span></p></div>
-      <div class="receipt"><p class="fig"><span class="l-en">€75k+</span><span class="l-pt">R$450 mil+</span></p><p class="what"><span class="l-en">in client revenue retained by taking over accounts in critical phases and running them solo for months</span><span class="l-pt">em receita de clientes mantida ao assumir contas em fase crítica e tocá-las sozinho por meses</span></p></div>
+      <div class="receipt"><p class="fig"><span class="l-en">€100k+</span><span class="l-pt">R$600 mil+</span></p><p class="what"><span class="l-en">in client accounts I ran across design, product and delivery, up to four at once</span><span class="l-pt">em contas de clientes que toquei entre design, produto e entrega, até quatro ao mesmo tempo</span></p></div>
       <div class="receipt"><p class="fig">1 <b>→</b> 3</p><p class="what"><span class="l-en">on the NN/g UX maturity scale in 6 months, through a UX culture program I co-led at a B2B SaaS company</span><span class="l-pt">na escala de maturidade de UX da NN/g em 6 meses, com um programa de cultura de UX que coliderei numa empresa de SaaS B2B</span></p></div>
     </div>
   </div>
