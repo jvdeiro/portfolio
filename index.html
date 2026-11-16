@@ -46,9 +46,9 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .nav{display:flex;align-items:center;gap:22px;font-size:15px}
 .nav a{text-decoration:none;color:var(--muted)}
 .nav a:hover{color:var(--fg)}
-.lang{display:inline-flex;gap:2px}
-.lang button{font:500 14px/1 var(--body);border:0;background:transparent;color:var(--muted);padding:6px 6px;cursor:pointer;border-bottom:1.5px solid transparent;border-radius:0}
-.lang button[aria-pressed="true"]{color:var(--fg);border-bottom-color:var(--fg)}
+.lang{display:inline-flex;border:1px solid color-mix(in srgb, var(--fg) 25%, transparent);border-radius:999px;padding:2px}
+.lang button{font:500 13px/1 var(--body);letter-spacing:.02em;border:0;background:transparent;color:var(--muted);padding:7px 10px;border-radius:999px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
 .btn{display:inline-flex;align-items:center;gap:8px;font:500 15px/1 var(--body);padding:12px 18px;border-radius:10px;border:1px solid var(--fg);background:var(--fg);color:var(--bg);text-decoration:none;cursor:pointer}
 .btn.ghost{background:transparent;color:var(--fg);border-color:color-mix(in srgb, var(--fg) 30%, transparent)}
 .btn.ghost:hover{border-color:var(--fg)}
