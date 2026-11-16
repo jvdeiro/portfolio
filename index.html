@@ -72,8 +72,10 @@ h3{font-size:26px;line-height:1.12}
 p{margin:0}
 
 /* hero: the one loud moment */
-.hero{padding-block:88px 48px;display:grid;gap:28px}
-.hero h1{max-width:16ch}
+.hero{padding-block:clamp(40px,7vh,88px) 44px;display:grid;gap:clamp(20px,3.5vh,32px)}
+.hero h1{max-width:21ch;font-size:clamp(46px,min(7.4vw,13vh),104px)}
+.hero-foot{display:grid;gap:24px}
+@media (min-width:900px){.hero-foot{grid-template-columns:minmax(0,560px) auto;justify-content:space-between;align-items:end;gap:48px}.hero .actions{justify-content:flex-end}}
 .hero p.lede{font-size:clamp(18px,2vw,21px);color:var(--muted);max-width:560px}
 .hero .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:4px}
 
@@ -186,11 +188,13 @@ footer{font-size:13px;color:var(--muted);padding-block:0 40px}
     <div class="hero">
       <p class="eyebrow"><span class="l-en">Senior Product Designer · Brazil · Remote</span><span class="l-pt">Product Designer Sênior · Brasil · Remoto</span></p>
       <h1><span class="l-en">I take products from idea to launch, thinking like the business owner.</span><span class="l-pt">Levo produtos da ideia ao lançamento, pensando como dono do negócio.</span></h1>
+      <div class="hero-foot">
       <p class="lede"><span class="l-en">Five years across a product studio, retail and B2B SaaS. As a sole designer, I run discovery, design the product and stay until it ships. Today I design with AI tools like Claude Design.</span><span class="l-pt">Cinco anos de experiência em estúdio de produto, varejo e SaaS B2B. Como único designer, conduzo o discovery, desenho o produto e fico até ele ir pro ar. Hoje desenho com ferramentas de IA como o Claude Design.</span></p>
       <div class="actions">
         <a class="btn" href="#work"><span class="l-en">See the work</span><span class="l-pt">Ver os cases</span></a>
         <a class="btn ghost l-en" href="joao-deiro-cv.pdf" target="_blank" rel="noopener">Open CV</a>
         <a class="btn ghost l-pt" href="joao-deiro-cv-pt.pdf" target="_blank" rel="noopener">Abrir CV</a>
+      </div>
       </div>
     </div>
 
