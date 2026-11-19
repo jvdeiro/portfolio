@@ -8,6 +8,11 @@
 <meta property="og:title" content="João Deiró · Senior Product Designer">
 <meta property="og:description" content="I take products from idea to launch, thinking like the business owner.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://joaodeiro.vercel.app/">
+<meta property="og:image" content="https://joaodeiro.vercel.app/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23F2EEE6'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='17' fill='%231D1A17' text-anchor='middle'%3EJD%3C/text%3E%3C/svg%3E">
 </head>
 <body>
@@ -189,6 +194,16 @@ figure.ph{display:none}
 .inshort{margin-bottom:clamp(32px,4vw,56px)}
 .story > figure{margin-block:20px}
 
+/* portrait + quotes */
+.portrait{width:112px;height:112px;border-radius:50%;object-fit:cover;display:block}
+.quotes{padding-top:0}
+.quote-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.quote{margin:0;border-top:1px solid var(--fg);padding-top:18px;display:grid;gap:16px;align-content:start}
+.quote blockquote{margin:0;font-family:var(--display);font-size:clamp(20px,2vw,24px);line-height:1.3}
+.quote figcaption{font-size:14px;color:var(--muted);display:grid;gap:2px}
+.quote figcaption strong{color:var(--fg);font-weight:500}
+@media (max-width:760px){.quote-grid{grid-template-columns:1fr}}
+@media (max-width:600px){.spec{grid-template-columns:1fr 1fr}.spec div{padding-right:12px}}
 [data-view]{display:none}
 [data-view].on{display:block}
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
@@ -238,6 +253,15 @@ figure.ph{display:none}
   <div class="wrap section" id="work">
     <div class="section-head"><h2><span class="l-en">Selected work</span><span class="l-pt">Cases selecionados</span></h2><p class="eyebrow"><span class="l-en">3 case studies</span><span class="l-pt">3 cases</span></p></div>
     <div class="cases">
+      <a class="case-row" href="#work-recurring-orders">
+        <figure class="shot"><div class="frame"><img src="img/horti-order-type.webp" alt="Order type screen: one-off order or recurring order, with the recurring order benefits" width="2058" height="1605" loading="lazy"></div></figure>
+        <div class="txt">
+          <p class="eyebrow"><span class="l-en">Retail · Web + WhatsApp</span><span class="l-pt">Varejo · Web + WhatsApp</span></p>
+          <h3><span class="l-en">How I designed a recurring order program that lifted order frequency from 1.6 to 2.8 a month</span><span class="l-pt">Como eu desenhei um programa de pedido recorrente que levou a frequência de 1,6 para 2,8 pedidos por mês</span></h3>
+          <p class="outcome"><span class="l-en">13% of WhatsApp sales · highest-NPS initiative</span><span class="l-pt">13% das vendas pelo WhatsApp · maior NPS da companhia</span></p>
+          <span class="more"><span class="l-en">Read the case →</span><span class="l-pt">Ler o case →</span></span>
+        </div>
+      </a>
       <a class="case-row" href="#work-investment-platform">
         <figure class="shot"><div class="frame"><img src="img/investment-platform-lp-performance.webp" alt="Investment platform, portfolio performance view with net worth, returns and a monthly chart" width="1600" height="1000" loading="lazy"></div></figure>
         <div class="txt">
@@ -251,17 +275,8 @@ figure.ph{display:none}
         <figure class="shot"><div class="frame"><img src="img/ai-marketing-job-map.webp" alt="Job map from the discovery of the AI marketing tool" width="2400" height="1855" loading="lazy"></div></figure>
         <div class="txt">
           <p class="eyebrow"><span class="l-en">AI · Small business · Web</span><span class="l-pt">IA · Pequenos negócios · Web</span></p>
-          <h3><span class="l-en">How I helped a founder find out if his idea was worth building, then designed the AI product through to a finished MVP</span><span class="l-pt">Como eu ajudei um fundador a descobrir se a ideia dele valia a pena, e depois desenhei o produto com IA até um MVP concluído</span></h3>
+          <h3><span class="l-en">How I took an AI marketing tool from a founder's question to a live MVP</span><span class="l-pt">Como eu levei uma ferramenta de marketing com IA da pergunta de um fundador a um MVP no ar</span></h3>
           <p class="outcome"><span class="l-en">Paid discovery → build contract → live MVP</span><span class="l-pt">Discovery pago → contrato de construção → MVP no ar</span></p>
-          <span class="more"><span class="l-en">Read the case →</span><span class="l-pt">Ler o case →</span></span>
-        </div>
-      </a>
-      <a class="case-row" href="#work-recurring-orders">
-        <figure class="shot"><div class="frame"><img src="img/horti-order-type.webp" alt="Order type screen: one-off order or recurring order, with the recurring order benefits" width="2058" height="1605" loading="lazy"></div></figure>
-        <div class="txt">
-          <p class="eyebrow"><span class="l-en">Retail · Web + WhatsApp</span><span class="l-pt">Varejo · Web + WhatsApp</span></p>
-          <h3><span class="l-en">How I designed a recurring order program that lifted order frequency from 1.6 to 2.8 a month</span><span class="l-pt">Como eu desenhei um programa de pedido recorrente que levou a frequência de 1,6 para 2,8 pedidos por mês</span></h3>
-          <p class="outcome"><span class="l-en">13% of WhatsApp sales · highest-NPS initiative</span><span class="l-pt">13% das vendas pelo WhatsApp · maior NPS da companhia</span></p>
           <span class="more"><span class="l-en">Read the case →</span><span class="l-pt">Ler o case →</span></span>
         </div>
       </a>
@@ -270,14 +285,12 @@ figure.ph{display:none}
 
   <div class="wrap section" id="about">
     <div class="about-grid">
-      <div class="prose l-en">
-        <h2>About</h2>
+      <div class="prose l-en"><img class="portrait" src="img/joao.webp" alt="João Deiró" width="480" height="480"><h2>About</h2>
         <p>I'm a product designer who works across product, design and delivery, and I take on product management when the team needs it.</p>
         <p>Before designing, I go where the work happens: store floors, client spreadsheets, discovery sessions. I design thinking about the number the business needs to move.</p>
         <p>Based in Brazil (UTC-3), with full overlap with US East and 4 to 5 hours with Central Europe. Fluent in English. Open to remote roles, full-time or contract.</p>
       </div>
-      <div class="prose l-pt">
-        <h2>Sobre</h2>
+      <div class="prose l-pt"><img class="portrait" src="img/joao.webp" alt="João Deiró" width="480" height="480"><h2>Sobre</h2>
         <p>Sou um product designer que transita entre produto, design e entrega, e assumo também a gestão de produto quando o time precisa.</p>
         <p>Antes de desenhar, vou onde o trabalho acontece: a loja, as planilhas do cliente, as sessões de discovery. Desenho pensando no número que o negócio precisa mover.</p>
         <p>Moro no Brasil (UTC-3), com sobreposição total com a costa leste dos EUA e de 4 a 5 horas com a Europa Central. Inglês fluente. Aberto a vagas remotas, CLT ou contrato.</p>
@@ -290,6 +303,14 @@ figure.ph{display:none}
       </ul>
     </div>
   </div>
+<div class="wrap section quotes" id="kind-words">
+  <div class="section-head"><h2><span class="l-en">What colleagues say</span><span class="l-pt">O que dizem colegas</span></h2><p class="eyebrow"><span class="l-en">LinkedIn recommendations, translated from Portuguese</span><span class="l-pt">Recomendações no LinkedIn</span></p></div>
+  <div class="quote-grid">
+    <figure class="quote"><blockquote><span class="l-en">“Working with João means you can count on someone focused on creating value. (...) He seeks to understand the end customer and propose better solutions.”</span><span class="l-pt">“Trabalhar com o João é saber que pode contar com alguém interessado na geração de valor. (...) Busca entender o cliente final e propor melhores soluções nesse sentido.”</span></blockquote><figcaption><strong>Anderson Lemke</strong><span class="l-en">Software Engineer and Team Lead, Taller</span><span class="l-pt">Engenheiro de software e líder técnico, Taller</span></figcaption></figure>
+    <figure class="quote"><blockquote><span class="l-en">“He proposes new solutions and helps his colleagues whenever he can.”</span><span class="l-pt">“Propõe novas soluções e ajuda os colegas sempre que possível.”</span></blockquote><figcaption><strong>Bianca Morandi da Silva</strong><span>Group Product Manager, Prevision</span></figcaption></figure>
+    <figure class="quote"><blockquote><span class="l-en">“Even when facing big challenges, his deliveries were always of great quality.”</span><span class="l-pt">“Mesmo ao enfrentar grandes desafios, suas entregas sempre tiveram grande qualidade.”</span></blockquote><figcaption><strong>Francisco Leite</strong><span class="l-en">Product Engineer, same team in 2023</span><span class="l-pt">Product Engineer, mesmo time em 2023</span></figcaption></figure>
+  </div>
+</div>
 </section>
 
 <!-- ============ CASE: INVESTMENT PLATFORM ============ -->
@@ -315,7 +336,7 @@ figure.ph{display:none}
         <p>The client wanted to become the go-to place for Angolan investors to see their real performance across brokers. Their users were beginner investors, experienced investors and investment advisors who manage money for their own clients. Until then, the client ran its advisory business on Excel spreadsheets.</p>
         <p class="challenge"><strong>The challenge:</strong> turn an ambitious vision, with a long wishlist, into a lean first version, in a domain full of financial terms and logic I had to learn fast.</p>
         <h2>Discovery</h2>
-        <p>In the first weeks I had calls with the client almost every day, and their spreadsheets became my main source to understand the business, the users and the financial logic behind every number. We worked through a Lean Canvas, event storming and user story mapping.</p>
+        <p>In the first weeks I had calls with the client almost every day, and their spreadsheets became my main source to understand the business, the users and the financial logic behind every number. I took the client through a Lean Canvas, event storming and user story mapping.</p>
         <p>To keep priorities honest, I built a canvas on top of the Fit for Purpose framework (David J. Anderson and Alexei Zheglov). It connects why a customer would use the product, how they judge whether it's working, and the metric that shows it. For example: an investor wants to consolidate positions from several brokers, judges it by how fast they can log a trade, and the metric is logging a trade in under 60 seconds.</p>
         <figure class="shot"><div class="frame"><img src="img/investment-fit-for-purpose.webp" alt="Fit for Purpose canvas: customer purposes, fitness criteria and fitness metrics with targets" width="2576" height="1494" loading="lazy"></div><figcaption>Fit for Purpose canvas, with a starting target for each metric.</figcaption></figure>
         <h2>Key decisions</h2>
@@ -326,7 +347,7 @@ figure.ph{display:none}
         <figure class="shot"><div class="frame"><img src="img/investment-platform-lp-audiences.webp" alt="Two account types side by side: an investor with one portfolio and an advisor with a portfolio per client" width="1600" height="1542" loading="lazy"></div><figcaption>The same idea on the launch landing page: one product for investors and for advisors with linked clients.</figcaption></figure>
         <h2 id="r-invest">Results</h2>
         <ul class="results">
-          <li><strong>The product is live.</strong> After the prototype, I designed the real product page by page, with much more depth and polish, while we adopted front-end component libraries with the engineers. The prototype's skeleton is still there; the visual quality is on another level.</li>
+          <li><strong>The product launched in Angola and is live.</strong> After the prototype, I designed the real product page by page, with much more depth and polish, while we adopted front-end component libraries with the engineers. The prototype's skeleton is still there; the visual quality is on another level.</li>
           <li>The canvas became the client's reference for prioritization, connecting the value they wanted to deliver with measurable outcomes.</li>
         </ul>
         <figure class="shot"><div class="frame"><img src="img/investment-platform-prototype.webp" alt="The prototype: portfolio performance page with demo data" width="1600" height="1145" loading="lazy"></div><figcaption>The prototype: the same portfolio performance page, running on demo data.</figcaption></figure>
@@ -354,7 +375,7 @@ figure.ph{display:none}
         <p>O cliente queria virar o lugar de referência pra investidores angolanos verem sua performance real entre várias corretoras. Os usuários eram investidores iniciantes, investidores experientes e assessores de investimento que gerenciam o dinheiro dos próprios clientes. Até então, o cliente tocava o negócio de assessoria em planilhas de Excel.</p>
         <p class="challenge"><strong>O desafio:</strong> transformar uma visão ambiciosa, com uma lista enorme de desejos, numa primeira versão enxuta, num domínio cheio de termos e lógica financeira que eu precisei aprender rápido.</p>
         <h2>Discovery</h2>
-        <p>Nas primeiras semanas, eu fazia call com o cliente quase todo dia, e as planilhas deles viraram minha principal fonte pra entender o negócio, os usuários e a lógica financeira por trás de cada número. Trabalhamos com Lean Canvas, event storming e user story mapping.</p>
+        <p>Nas primeiras semanas, eu fazia call com o cliente quase todo dia, e as planilhas deles viraram minha principal fonte pra entender o negócio, os usuários e a lógica financeira por trás de cada número. Conduzi com o cliente um Lean Canvas, um event storming e um user story mapping.</p>
         <p>Pra manter as prioridades honestas, criei um canvas em cima do framework Fit for Purpose (David J. Anderson e Alexei Zheglov). Ele conecta por que um cliente usaria o produto, como ele julga se está funcionando e a métrica que mostra isso. Por exemplo: um investidor quer consolidar posições de várias corretoras, julga isso pela rapidez de registrar uma operação, e a métrica é registrar uma operação em menos de 60 segundos.</p>
         <figure class="shot"><div class="frame"><img src="img/investment-fit-for-purpose.webp" alt="Canvas Fit for Purpose: propósitos do cliente, critérios de adequação e métricas com metas" width="2576" height="1494" loading="lazy"></div><figcaption>Canvas Fit for Purpose, com uma meta inicial para cada métrica.</figcaption></figure>
         <h2>Decisões-chave</h2>
@@ -365,7 +386,7 @@ figure.ph{display:none}
         <figure class="shot"><div class="frame"><img src="img/investment-platform-lp-audiences.webp" alt="Dois tipos de conta lado a lado: um investidor com uma carteira e um assessor com uma carteira por cliente" width="1600" height="1542" loading="lazy"></div><figcaption>A mesma ideia na landing page de lançamento: um produto pra investidores e pra assessores com clientes vinculados.</figcaption></figure>
         <h2 id="r-invest-pt">Resultados</h2>
         <ul class="results">
-          <li><strong>O produto está no ar.</strong> Depois do protótipo, desenhei o produto de verdade, página por página, com muito mais profundidade e acabamento, enquanto adotávamos bibliotecas de componentes de front-end junto com os engenheiros. O esqueleto do protótipo continua lá; a qualidade visual está em outro nível.</li>
+          <li><strong>O produto foi lançado em Angola e está no ar.</strong> Depois do protótipo, desenhei o produto de verdade, página por página, com muito mais profundidade e acabamento, enquanto adotávamos bibliotecas de componentes de front-end junto com os engenheiros. O esqueleto do protótipo continua lá; a qualidade visual está em outro nível.</li>
           <li>O canvas virou a referência do cliente pra priorização, conectando o valor que ele queria entregar a resultados mensuráveis.</li>
         </ul>
         <figure class="shot"><div class="frame"><img src="img/investment-platform-prototype.webp" alt="O protótipo: página de performance da carteira com dados de demonstração" width="1600" height="1145" loading="lazy"></div><figcaption>O protótipo: a mesma página de performance da carteira, rodando com dados de demonstração.</figcaption></figure>
@@ -374,7 +395,7 @@ figure.ph{display:none}
         <p>Eu testaria o protótipo diretamente com investidores e assessores antes do desenvolvimento, não só com o time do cliente. E transformaria as fitness metrics em métricas de lançamento desde o primeiro dia, pra gente medir o produto com a mesma linguagem que usamos pra desenhá-lo.</p>
       </div>
     </div>
-    <nav class="next"><a href="#work"><span class="l-en">← All work</span><span class="l-pt">← Todos os cases</span></a><a href="#work-ai-marketing"><span class="eyebrow"><span class="l-en">Next case</span><span class="l-pt">Próximo case</span></span><strong><span class="l-en">AI marketing tool →</span><span class="l-pt">Ferramenta de marketing com IA →</span></strong></a></nav>
+    <nav class="next"><a href="#work-recurring-orders"><span class="eyebrow"><span class="l-en">Previous case</span><span class="l-pt">Case anterior</span></span><strong><span class="l-en">← Recurring order program</span><span class="l-pt">← Programa de pedido recorrente</span></strong></a><a href="#work-ai-marketing"><span class="eyebrow"><span class="l-en">Next case</span><span class="l-pt">Próximo case</span></span><strong><span class="l-en">AI marketing tool →</span><span class="l-pt">Ferramenta de marketing com IA →</span></strong></a></nav>
   </div>
 </section>
 
@@ -386,7 +407,7 @@ figure.ph{display:none}
     <div class="l-en">
       <div class="case-head">
         <p class="eyebrow">Case study · AI product</p>
-        <h1>How I helped a founder find out if his idea was worth building, then designed the AI product through to a finished MVP</h1>
+        <h1>How I took an AI marketing tool from a founder's question to a live MVP</h1>
         <dl class="spec">
           <div><dt>Role</dt><dd>Product Designer (sole designer), leading discovery</dd></div>
           <div><dt>Client</dt><dd>First-time founder of an AI marketing tool for small local businesses in Brazil, through a product studio</dd></div>
@@ -414,7 +435,7 @@ figure.ph{display:none}
         <h2>Key decisions</h2>
         <div class="decision"><h3>1. Turn the idea into six testable bets</h3><p>I wrote six hypotheses in the order the customer would live them, from landing page to paying customer, each with a target. For example: at least 60% of first attempts end with a campaign created, in under 20 minutes. I asked the founder which one mattered most, and his answer became the core bet: owners with little tech familiarity will pay for a tool that creates and distributes geolocated ads in a few clicks.</p></div>
         <div class="decision"><h3>2. Build the riskiest part first</h3><p>Sign-up and campaign settings were solved problems. The real risk was whether AI-generated images would be good enough for an owner to put their business name on them. So the build started with that slice of the MVP, under the goal "delight the store owner in 15 minutes", and the founder put it in front of 5 store owners in his region. The images were good enough, and the rest of the MVP followed.</p></div>
-        <div class="decision"><h3>3. A conversation instead of a form</h3><p>The founder's rule was "the owner can't have to think". We chose a guided chat over a form, and I designed it in three steps (my business, my customer, my campaign) and wrote the first version of the questions the AI asks. The first two steps are filled only once, so every new campaign starts from what the system already knows. From the event storming, I sketched a low-fidelity screen for each event, and from there designed every screen of the MVP.</p></div>
+        <div class="decision"><h3>3. A conversation instead of a form</h3><p>The founder's rule was "the owner can't have to think". I designed the input as a guided chat in three steps (my business, my customer, my campaign) and wrote the first version of the questions the AI asks. The first two steps are filled only once, so every new campaign starts from what the system already knows. From the event storming, I sketched a low-fidelity screen for each event, and from there designed every screen of the MVP.</p></div>
         <figure class="shot"><div class="frame"><img src="img/ai-marketing-event-storming.webp" alt="Event storming of the full journey, from sign-up to campaign results" width="2400" height="452" loading="lazy"></div><figcaption>Event storming: the full journey, from sign-up to campaign results.</figcaption></figure>
         <figure class="ph"><div class="ph-box"><span>Image to add</span><strong>Low-fidelity sketches and MVP screens</strong></div></figure>
         <h2 id="r-ai">Results</h2>
@@ -431,7 +452,7 @@ figure.ph{display:none}
     <div class="l-pt">
       <div class="case-head">
         <p class="eyebrow">Case · Produto com IA</p>
-        <h1>Como eu ajudei um fundador a descobrir se a ideia dele valia a pena, e depois desenhei o produto com IA até um MVP concluído</h1>
+        <h1>Como eu levei uma ferramenta de marketing com IA da pergunta de um fundador a um MVP no ar</h1>
         <dl class="spec">
           <div><dt>Cargo</dt><dd>Product Designer (único designer), conduzindo o discovery</dd></div>
           <div><dt>Cliente</dt><dd>Fundador de primeira viagem de uma ferramenta de marketing com IA para pequenos negócios locais no Brasil, via estúdio de produto</dd></div>
@@ -459,7 +480,7 @@ figure.ph{display:none}
         <h2>Decisões-chave</h2>
         <div class="decision"><h3>1. Transformar a ideia em seis apostas testáveis</h3><p>Escrevi seis hipóteses na ordem em que o cliente as viveria, da landing page até o cliente pagante, cada uma com uma meta. Por exemplo: pelo menos 60% das primeiras tentativas terminam com uma campanha criada, em menos de 20 minutos. Perguntei ao fundador qual era a mais importante, e a resposta dele virou a aposta central: donos de negócio com pouca familiaridade com tecnologia vão pagar por uma ferramenta que cria e distribui anúncios geolocalizados em poucos cliques.</p></div>
         <div class="decision"><h3>2. Construir primeiro a parte mais arriscada</h3><p>Cadastro e configuração de campanha eram problemas resolvidos. O risco real era se as imagens geradas por IA seriam boas o suficiente para um dono colocar o nome do negócio nelas. Então a construção começou por essa fatia do MVP, com o objetivo "encantar o lojista em 15 minutos", e o fundador colocou ela na frente de 5 lojistas da região dele. As imagens foram boas o suficiente, e o resto do MVP veio em seguida.</p></div>
-        <div class="decision"><h3>3. Uma conversa em vez de um formulário</h3><p>A regra do fundador era "o lojista não pode precisar pensar". Escolhemos um chat guiado em vez de um formulário, e eu desenhei ele em três etapas (meu negócio, meu cliente, minha campanha) e escrevi a primeira versão das perguntas que a IA faz. As duas primeiras etapas são preenchidas uma única vez, então cada nova campanha começa do que o sistema já sabe. A partir do event storming, esbocei uma tela de baixa fidelidade para cada evento e, dali, desenhei todas as telas do MVP.</p></div>
+        <div class="decision"><h3>3. Uma conversa em vez de um formulário</h3><p>A regra do fundador era "o lojista não pode precisar pensar". Desenhei a entrada como um chat guiado em três etapas (meu negócio, meu cliente, minha campanha) e escrevi a primeira versão das perguntas que a IA faz. As duas primeiras etapas são preenchidas uma única vez, então cada nova campanha começa do que o sistema já sabe. A partir do event storming, esbocei uma tela de baixa fidelidade para cada evento e, dali, desenhei todas as telas do MVP.</p></div>
         <figure class="shot"><div class="frame"><img src="img/ai-marketing-event-storming.webp" alt="Event storming da jornada completa, do cadastro aos resultados da campanha" width="2400" height="452" loading="lazy"></div><figcaption>Event storming: a jornada completa, do cadastro aos resultados da campanha.</figcaption></figure>
         <figure class="ph"><div class="ph-box"><span>Imagem a adicionar</span><strong>Esboços de baixa fidelidade e telas do MVP</strong></div></figure>
         <h2 id="r-ai-pt">Resultados</h2>
@@ -472,7 +493,7 @@ figure.ph{display:none}
         <figure class="ph"><div class="ph-box"><span>Imagem a adicionar</span><strong>MVP no ar x redesign</strong></div></figure>
       </div>
     </div>
-    <nav class="next"><a href="#work-investment-platform"><span class="eyebrow"><span class="l-en">Previous case</span><span class="l-pt">Case anterior</span></span><strong><span class="l-en">← Investment platform</span><span class="l-pt">← Plataforma de investimentos</span></strong></a><a href="#work-recurring-orders"><span class="eyebrow"><span class="l-en">Next case</span><span class="l-pt">Próximo case</span></span><strong><span class="l-en">Recurring order program →</span><span class="l-pt">Programa de pedido recorrente →</span></strong></a></nav>
+    <nav class="next"><a href="#work-investment-platform"><span class="eyebrow"><span class="l-en">Previous case</span><span class="l-pt">Case anterior</span></span><strong><span class="l-en">← Investment platform</span><span class="l-pt">← Plataforma de investimentos</span></strong></a><a href="#work"><span class="eyebrow"><span class="l-en">Back to</span><span class="l-pt">Voltar para</span></span><strong><span class="l-en">All work →</span><span class="l-pt">Todos os cases →</span></strong></a></nav>
   </div>
 </section>
 
@@ -554,7 +575,7 @@ figure.ph{display:none}
         <p>Eu cobraria métricas claras desde o primeiro dia: o programa claramente funcionou, mas eu não acompanhei quantos clientes chegaram a cada faixa. E quatro anos sem mudanças não é um objetivo em si. Se eu estivesse lá hoje, testaria o fluxo com os clientes de novo, porque sempre dá para melhorar alguma coisa.</p>
       </div>
     </div>
-    <nav class="next"><a href="#work-ai-marketing"><span class="eyebrow"><span class="l-en">Previous case</span><span class="l-pt">Case anterior</span></span><strong><span class="l-en">← AI marketing tool</span><span class="l-pt">← Ferramenta de marketing com IA</span></strong></a><a href="#work"><span class="eyebrow"><span class="l-en">Back to</span><span class="l-pt">Voltar para</span></span><strong><span class="l-en">All work →</span><span class="l-pt">Todos os cases →</span></strong></a></nav>
+    <nav class="next"><a href="#work"><span class="l-en">← All work</span><span class="l-pt">← Todos os cases</span></a><a href="#work-investment-platform"><span class="eyebrow"><span class="l-en">Next case</span><span class="l-pt">Próximo case</span></span><strong><span class="l-en">Investment platform →</span><span class="l-pt">Plataforma de investimentos →</span></strong></a></nav>
   </div>
 </section>
 </main>
